@@ -12,7 +12,7 @@ class Words:
     def __init__(self):
         self.count = 0
     def input_words_and_translated(self):
-        input_word = input('Enter the German word:')
+        input_word = input('Enter the German:')
         translated_word = input('Enter the translated:')
         cur.execute("INSERT INTO words (GERMAN, Translated) VALUES (?, ?);", (input_word, translated_word))
 
