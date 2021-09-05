@@ -27,7 +27,7 @@ class UserInterface:
         if choice == 2:
             cur.execute('SELECT COUNT(id) FROM words;')
             count = cur.fetchone()[0]
-            cur.execute('SELECT German, Translated FROM words WHERE id = (?);', (str(random.randrange(1,int(count)))))
+            cur.execute('SELECT German, Translated FROM words WHERE id = (?);', (str(random.randrange(1,int(count))),))
             print(cur.fetchone())
         if choice == 0:
             exit()
